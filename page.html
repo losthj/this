@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <ul id="navmenu">
+        <li><a href="page1.html">Menu Item One</a></li>
+        <li><a href="page2.html">Menu Item Two</a></li>
+        <li><a href="page3.html">Menu Item Three</a></li>
+        <li><a href="page4.html">Menu Item Four</a></li>
+    </ul>
+</body>
+</html>
+<script>
+    var navmenu = document.createElement('ul');
+    navmenu.id = "navmenu";
+    for (var i = 1; i <= 4; i++) {
+        var navitem = document.createElement('li');
+        var navlink = document.createElement('a');
+        navlink.href = "page" + i + ".html";
+        navlink.appendChild(document.createTextNode("Menu Item " + i));
+        navitem.appendChild(navlink);
+    }
+    document.body.appendChild(navmenu);
+</script>
